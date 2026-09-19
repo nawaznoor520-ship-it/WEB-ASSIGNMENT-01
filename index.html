@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexora | Home</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Flowbite CSS (CDN) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- ============ NAVBAR COMPONENT (Flowbite Navbar) ============ -->
+  <nav class="bg-white border-b border-gray-200 fixed w-full z-20 top-0 left-0">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex items-center space-x-2">
+        <svg class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <span class="self-center text-2xl font-bold text-gray-900">Nexora</span>
+      </a>
+
+      <button data-collapse-toggle="navbar-menu" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100"
+        aria-controls="navbar-menu" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
+        <ul class="font-medium flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+          <li><a href="index.html" class="block py-2 px-3 text-indigo-600 font-semibold">Home</a></li>
+          <li><a href="src/pages/about.html" class="block py-2 px-3 text-gray-700 hover:text-indigo-600">About</a></li>
+          <li><a href="src/pages/contact.html" class="block py-2 px-3 text-gray-700 hover:text-indigo-600">Contact</a></li>
+          <li><a href="src/pages/signup.html" class="block py-2 px-3 text-gray-700 hover:text-indigo-600">Sign Up</a></li>
+          <li>
+            <a href="src/pages/signin.html"
+              class="block py-2 px-4 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 text-center">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="pt-32 pb-16 px-4 bg-gradient-to-br from-indigo-50 to-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center fade-in">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          Build software your customers actually love.
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Nexora helps growing teams design, ship, and scale digital products faster —
+          with tools built for developers and designers alike.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="src/pages/signup.html"
+            class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold shadow hover:bg-indigo-700 transition">
+            Get Started Free
+          </a>
+          <a href="src/pages/about.html"
+            class="px-6 py-3 bg-white text-indigo-600 border border-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Simple inline SVG illustration (technology themed) -->
+      <div class="flex justify-center">
+        <svg viewBox="0 0 400 300" class="w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="40" width="320" height="180" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+          <rect x="60" y="60" width="120" height="14" rx="4" fill="#a5b4fc"/>
+          <rect x="60" y="90" width="200" height="10" rx="4" fill="#c7d2fe"/>
+          <rect x="60" y="110" width="160" height="10" rx="4" fill="#c7d2fe"/>
+          <circle cx="300" cy="150" r="40" fill="#6366f1"/>
+          <path d="M285 150l10 10 20-20" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="60" y="150" width="180" height="10" rx="4" fill="#c7d2fe"/>
+          <rect x="140" y="230" width="120" height="16" rx="8" fill="#6366f1"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE CARDS COMPONENT ============ -->
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900">Why choose Nexora</h2>
+    <p class="text-center text-gray-500 mt-2">Everything you need to build modern products, in one place.</p>
+
+    <div class="grid md:grid-cols-3 gap-8 mt-10">
+      <div class="p-6 bg-white border border-gray-100 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Fast by default</h3>
+        <p class="mt-2 text-gray-600">Optimized infrastructure so your product loads instantly, everywhere.</p>
+      </div>
+
+      <div class="p-6 bg-white border border-gray-100 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Secure by design</h3>
+        <p class="mt-2 text-gray-600">Enterprise-grade security baked into every layer of the platform.</p>
+      </div>
+
+      <div class="p-6 bg-white border border-gray-100 rounded-xl shadow hover:shadow-lg transition">
+        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4zm6 0a4 4 0 10-4-4" /></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Built for teams</h3>
+        <p class="mt-2 text-gray-600">Collaborate in real time with role-based permissions and shared workspaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATISTICS COMPONENT ============ -->
+  <section class="py-16 px-4 bg-indigo-600">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+      <div>
+        <p class="text-4xl font-extrabold">12K+</p>
+        <p class="mt-1 text-indigo-100">Active users</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold">98%</p>
+        <p class="mt-1 text-indigo-100">Customer satisfaction</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold">40+</p>
+        <p class="mt-1 text-indigo-100">Countries served</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold">24/7</p>
+        <p class="mt-1 text-indigo-100">Support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES CARDS COMPONENT ============ -->
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8 mt-10">
+      <div class="p-6 border border-gray-100 rounded-xl shadow hover:shadow-lg transition text-center">
+        <h3 class="text-lg font-semibold text-gray-900">Web Development</h3>
+        <p class="mt-2 text-gray-600 text-sm">Responsive websites built with modern frameworks and best practices.</p>
+      </div>
+      <div class="p-6 border border-gray-100 rounded-xl shadow hover:shadow-lg transition text-center">
+        <h3 class="text-lg font-semibold text-gray-900">Cloud Hosting</h3>
+        <p class="mt-2 text-gray-600 text-sm">Reliable, scalable hosting with automatic backups and monitoring.</p>
+      </div>
+      <div class="p-6 border border-gray-100 rounded-xl shadow hover:shadow-lg transition text-center">
+        <h3 class="text-lg font-semibold text-gray-900">UI/UX Design</h3>
+        <p class="mt-2 text-gray-600 text-sm">Clean, user-friendly interfaces designed around your customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING CARDS COMPONENT ============ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-gray-900">Simple Pricing</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+
+        <div class="p-8 bg-white rounded-xl shadow border border-gray-100 text-center">
+          <h3 class="text-lg font-semibold text-gray-900">Starter</h3>
+          <p class="text-4xl font-extrabold mt-4">$9<span class="text-base font-medium text-gray-500">/mo</span></p>
+          <ul class="mt-6 space-y-2 text-gray-600 text-sm">
+            <li>1 Project</li>
+            <li>Basic Support</li>
+            <li>5GB Storage</li>
+          </ul>
+          <a href="signup.html" class="block mt-6 px-4 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700">Choose Plan</a>
+        </div>
+
+        <div class="p-8 bg-indigo-600 rounded-xl shadow-lg text-center text-white scale-105">
+          <h3 class="text-lg font-semibold">Professional</h3>
+          <p class="text-4xl font-extrabold mt-4">$29<span class="text-base font-medium text-indigo-100">/mo</span></p>
+          <ul class="mt-6 space-y-2 text-indigo-100 text-sm">
+            <li>10 Projects</li>
+            <li>Priority Support</li>
+            <li>50GB Storage</li>
+          </ul>
+          <a href="signup.html" class="block mt-6 px-4 py-2 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100">Choose Plan</a>
+        </div>
+
+        <div class="p-8 bg-white rounded-xl shadow border border-gray-100 text-center">
+          <h3 class="text-lg font-semibold text-gray-900">Enterprise</h3>
+          <p class="text-4xl font-extrabold mt-4">$79<span class="text-base font-medium text-gray-500">/mo</span></p>
+          <ul class="mt-6 space-y-2 text-gray-600 text-sm">
+            <li>Unlimited Projects</li>
+            <li>24/7 Support</li>
+            <li>500GB Storage</li>
+          </ul>
+          <a href="signup.html" class="block mt-6 px-4 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700">Choose Plan</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS COMPONENT ============ -->
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900">What our customers say</h2>
+    <div class="grid md:grid-cols-3 gap-8 mt-10">
+      <div class="p-6 bg-white border border-gray-100 rounded-xl shadow">
+        <p class="text-gray-600 italic">"Nexora helped us launch our product two months ahead of schedule."</p>
+        <p class="mt-4 font-semibold text-gray-900">Ayesha Khan</p>
+        <p class="text-sm text-gray-500">Product Manager, Nova Labs</p>
+      </div>
+      <div class="p-6 bg-white border border-gray-100 rounded-xl shadow">
+        <p class="text-gray-600 italic">"The support team is incredibly responsive and the platform is rock solid."</p>
+        <p class="mt-4 font-semibold text-gray-900">Bilal Ahmed</p>
+        <p class="text-sm text-gray-500">CTO, Skyline Apps</p>
+      </div>
+      <div class="p-6 bg-white border border-gray-100 rounded-xl shadow">
+        <p class="text-gray-600 italic">"Simple, clean, and exactly what our small team needed to move fast."</p>
+        <p class="mt-4 font-semibold text-gray-900">Sara Malik</p>
+        <p class="text-sm text-gray-500">Founder, Brightloop</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM CARDS COMPONENT ============ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-gray-900">Meet the Team</h2>
+      <div class="grid md:grid-cols-4 gap-8 mt-10 text-center">
+        <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+          <div class="w-20 h-20 bg-indigo-100 rounded-full mx-auto"></div>
+          <h3 class="mt-4 font-semibold text-gray-900">Hassan Raza</h3>
+          <p class="text-sm text-gray-500">Founder & CEO</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+          <div class="w-20 h-20 bg-indigo-100 rounded-full mx-auto"></div>
+          <h3 class="mt-4 font-semibold text-gray-900">Mahnoor Ali</h3>
+          <p class="text-sm text-gray-500">Lead Designer</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+          <div class="w-20 h-20 bg-indigo-100 rounded-full mx-auto"></div>
+          <h3 class="mt-4 font-semibold text-gray-900">Usman Tariq</h3>
+          <p class="text-sm text-gray-500">Lead Engineer</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow border border-gray-100">
+          <div class="w-20 h-20 bg-indigo-100 rounded-full mx-auto"></div>
+          <h3 class="mt-4 font-semibold text-gray-900">Zainab Fatima</h3>
+          <p class="text-sm text-gray-500">Marketing Lead</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ACCORDION COMPONENT (Flowbite Accordion) ============ -->
+  <section class="py-16 px-4 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
+    <div id="faq-accordion" data-accordion="collapse">
+
+      <h2 id="faq-heading-1">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 border border-gray-200 rounded-t-xl bg-white hover:bg-gray-50"
+          data-accordion-target="#faq-body-1" aria-expanded="true" aria-controls="faq-body-1">
+          <span>Can I try Nexora for free?</span>
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+        </button>
+      </h2>
+      <div id="faq-body-1" class="hidden" aria-labelledby="faq-heading-1">
+        <div class="p-5 border border-t-0 border-gray-200 bg-white">
+          <p class="text-gray-600">Yes, the Starter plan includes a 14-day free trial with no credit card required.</p>
+        </div>
+      </div>
+
+      <h2 id="faq-heading-2">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 border border-t-0 border-gray-200 bg-white hover:bg-gray-50"
+          data-accordion-target="#faq-body-2" aria-expanded="false" aria-controls="faq-body-2">
+          <span>Can I cancel my subscription anytime?</span>
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+        </button>
+      </h2>
+      <div id="faq-body-2" class="hidden" aria-labelledby="faq-heading-2">
+        <div class="p-5 border border-t-0 border-gray-200 bg-white">
+          <p class="text-gray-600">Absolutely — you can cancel from your account settings at any time, no questions asked.</p>
+        </div>
+      </div>
+
+      <h2 id="faq-heading-3">
+        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 border border-t-0 border-gray-200 rounded-b-xl bg-white hover:bg-gray-50"
+          data-accordion-target="#faq-body-3" aria-expanded="false" aria-controls="faq-body-3">
+          <span>Do you offer student discounts?</span>
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-width="2" d="M9 5 5 1 1 5"/></svg>
+        </button>
+      </h2>
+      <div id="faq-body-3" class="hidden" aria-labelledby="faq-heading-3">
+        <div class="p-5 border border-t-0 border-gray-200 rounded-b-xl bg-white">
+          <p class="text-gray-600">Yes, students get 50% off any paid plan with a valid university email address.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ BLOG / ARTICLE CARDS COMPONENT ============ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-gray-900">From our Blog</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        <article class="bg-white rounded-xl shadow border border-gray-100 overflow-hidden hover:shadow-lg transition">
+          <div class="h-40 bg-indigo-100"></div>
+          <div class="p-5">
+            <p class="text-xs text-indigo-600 font-semibold uppercase">Development</p>
+            <h3 class="mt-2 font-semibold text-gray-900">5 Tips for Faster Websites</h3>
+            <p class="mt-2 text-sm text-gray-600">Simple performance wins every developer should know.</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow border border-gray-100 overflow-hidden hover:shadow-lg transition">
+          <div class="h-40 bg-indigo-100"></div>
+          <div class="p-5">
+            <p class="text-xs text-indigo-600 font-semibold uppercase">Design</p>
+            <h3 class="mt-2 font-semibold text-gray-900">Designing with Tailwind CSS</h3>
+            <p class="mt-2 text-sm text-gray-600">How utility-first CSS speeds up your workflow.</p>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow border border-gray-100 overflow-hidden hover:shadow-lg transition">
+          <div class="h-40 bg-indigo-100"></div>
+          <div class="p-5">
+            <p class="text-xs text-indigo-600 font-semibold uppercase">Business</p>
+            <h3 class="mt-2 font-semibold text-gray-900">Scaling Your Startup in 2026</h3>
+            <p class="mt-2 text-sm text-gray-600">Lessons learned from growing a small team fast.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALL TO ACTION COMPONENT ============ -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto bg-indigo-600 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-3xl font-bold">Ready to get started?</h2>
+      <p class="mt-2 text-indigo-100">Join thousands of teams already building with Nexora.</p>
+      <a href="src/pages/signup.html"
+        class="inline-block mt-6 px-8 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition">
+        Create Free Account
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER COMPONENT ============ -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-900">Subscribe to our Newsletter</h2>
+      <p class="mt-2 text-gray-600">Get product updates and tech tips straight to your inbox.</p>
+      <form class="mt-6 flex flex-col sm:flex-row gap-3 justify-center" onsubmit="alert('Thanks for subscribing!'); return false;">
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input id="newsletter-email" type="email" required placeholder="you@example.com"
+          class="w-full sm:w-72 px-4 py-3 border border-gray-300 rounded-lg form-input focus:ring-2 focus:ring-indigo-500" />
+        <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER COMPONENT ============ -->
+  <footer class="bg-gray-900 text-gray-300 py-12 px-4">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+      <div>
+        <span class="text-xl font-bold text-white">Nexora</span>
+        <p class="mt-3 text-sm text-gray-400">Building modern digital products for growing teams.</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-3">Navigation</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="src/pages/about.html" class="hover:text-white">About</a></li>
+          <li><a href="src/pages/contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-3">Account</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="src/pages/signup.html" class="hover:text-white">Sign Up</a></li>
+          <li><a href="src/pages/signin.html" class="hover:text-white">Sign In</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-3">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li>Lahore, Pakistan</li>
+          <li>hello@nexora.com</li>
+          <li>+92 300 1234567</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-500">
+      &copy; 2026 Nexora. Built for Web Engineering Assignment 01, University of Lahore.
+    </div>
+  </footer>
+
+  <!-- Flowbite JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
